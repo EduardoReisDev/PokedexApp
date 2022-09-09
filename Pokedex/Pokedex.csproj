@@ -45,4 +45,10 @@
 		<MauiAsset Include="Resources\Raw\**" LogicalName="%(RecursiveDir)%(Filename)%(Extension)" />
 	</ItemGroup>
 
+	<ItemGroup>
+	  <None Remove="System.Text.Json" />
+	</ItemGroup>
+	<ItemGroup>
+	  <PackageReference Include="System.Text.Json" Version="6.0.5" />
+	</ItemGroup>
 </Project>
