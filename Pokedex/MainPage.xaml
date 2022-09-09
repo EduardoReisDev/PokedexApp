@@ -1,42 +1,45 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Pokedex.MainPage">
+             x:Class="Pokedex.MainPage"
+             Title="Pokedex"
+             Shell.NavBarIsVisible="False"
+             BackgroundColor="#ee6055">
 
-    <ScrollView>
-        <VerticalStackLayout
-            Spacing="25"
-            Padding="30,0"
-            VerticalOptions="Center">
-
-            <Image
-                Source="dotnet_bot.png"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Hello, World!"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="32"
-                HorizontalOptions="Center" />
-
-            <Label
-                Text="Welcome to .NET Multi-platform App UI"
-                SemanticProperties.HeadingLevel="Level2"
-                SemanticProperties.Description="Welcome to dot net Multi platform App U I"
-                FontSize="18"
-                HorizontalOptions="Center" />
-
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
-
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="2*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Image Grid.Row="0"
+               VerticalOptions="Center"
+               Margin="20,0"
+               Source="ic_pokebola_red.png"/>
+        <VerticalStackLayout Grid.Row="0"
+                             VerticalOptions="Center"
+                             Margin="20,0">
+                <Label Text="Find your"
+                       TextColor="White"
+                       FontSize="24"
+                       FontAttributes="Bold"/>
+                <Label Text="favorite Pokémon"
+                       TextColor="White"
+                       FontSize="28"
+                       FontAttributes="Bold"
+                       Margin="0,0,0,5"/>
+                <Entry Placeholder="Search"
+                       BackgroundColor="White"
+                       PlaceholderColor="Gray"/>
         </VerticalStackLayout>
-    </ScrollView>
-
+        <VerticalStackLayout Grid.Row="1"
+                             Spacing="20"
+                             Margin="20,0">
+            <Button Text="Types"
+                    BackgroundColor="Green"/>
+            <Button Text="Location"
+                    BackgroundColor="Orange"/>
+            <Button Text="Movies and Abilities"
+                    BackgroundColor="BlueViolet"/>
+        </VerticalStackLayout>
+    </Grid>
 </ContentPage>
-
