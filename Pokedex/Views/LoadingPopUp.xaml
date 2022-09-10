@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<toolkit:Popup x:Class="Pokedex.Views.LoadingPopUp"
+               xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+               xmlns:toolkit="http://schemas.microsoft.com/dotnet/2022/maui/toolkit"
+               CanBeDismissedByTappingOutsideOfPopup="False">
+
+    <StackLayout Padding="20"
+                 Background="#ee6055">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"
+                    WidthRequest="24"
+                    Source="ic_pikachu_white.png"/>
+            <Label Grid.Column="1"
+                    TextColor="White"
+                    FontFamily="OpenSansSemibold"
+                    VerticalTextAlignment="Center"
+                    Margin="6,0,0,0"
+                    Text="PokeDex"/>
+        </Grid>
+        <ActivityIndicator IsRunning="True"
+                            WidthRequest="50"
+                            Margin="0,20"
+                            Color="White"
+                            VerticalOptions="Center"/>
+        <Label x:Name="LabelMessage"
+               FontSize="14"
+               FontFamily="OpenSansRegular"
+               TextColor="White"/>
+    </StackLayout>
+</toolkit:Popup>

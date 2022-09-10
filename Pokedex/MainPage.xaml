@@ -8,14 +8,31 @@
 
     <Grid>
         <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
             <RowDefinition Height="2*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <Image Grid.Row="0"
+        <Grid Grid.Row="0"
+              Margin="20">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+            <Image Grid.Column="0"
+                   WidthRequest="24"
+                   Source="ic_pikachu_white.png"/>
+            <Label Grid.Column="1"
+                   TextColor="White"
+                   FontFamily="OpenSansSemibold"
+                   VerticalTextAlignment="Center"
+                   Margin="6,0,0,0"
+                   Text="PokeDex"/>
+        </Grid>
+        <Image Grid.Row="1"
                VerticalOptions="Center"
                Margin="20,0"
                Source="ic_pokebola_red.png"/>
-        <VerticalStackLayout Grid.Row="0"
+        <VerticalStackLayout Grid.Row="1"
                              VerticalOptions="Center"
                              Margin="20,0">
                 <Label Text="Find your"
@@ -29,17 +46,36 @@
                        Margin="0,0,0,5"/>
                 <Entry Placeholder="Search"
                        BackgroundColor="White"
-                       PlaceholderColor="Gray"/>
+                       PlaceholderColor="Gray"
+                       Completed="OnTextCompleted"/>
         </VerticalStackLayout>
-        <VerticalStackLayout Grid.Row="1"
-                             Spacing="20"
-                             Margin="20,0">
+        <VerticalStackLayout Grid.Row="2"
+                             Spacing="16"
+                             Margin="20,0,20,20">
             <Button Text="Types"
-                    BackgroundColor="Green"/>
+                    Padding="14"
+                    FontFamily="OpenSansSemibold"
+                    CornerRadius="14"
+                    TextColor="#ee6055"
+                    BackgroundColor="White"/>
             <Button Text="Location"
-                    BackgroundColor="Orange"/>
+                    Padding="14"
+                    FontFamily="OpenSansSemibold"
+                    CornerRadius="14"
+                    TextColor="#ee6055"
+                    BackgroundColor="White"/>
             <Button Text="Movies and Abilities"
-                    BackgroundColor="BlueViolet"/>
+                    Padding="14"
+                    FontFamily="OpenSansSemibold"
+                    CornerRadius="14"
+                    TextColor="#ee6055"
+                    BackgroundColor="White"/>
+            <Button Text="Pokedexes"
+                    Padding="14"
+                    FontFamily="OpenSansSemibold"
+                    CornerRadius="14"
+                    TextColor="#ee6055"
+                    BackgroundColor="White"/>
         </VerticalStackLayout>
     </Grid>
 </ContentPage>
