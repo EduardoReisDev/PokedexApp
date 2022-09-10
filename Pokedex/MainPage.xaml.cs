@@ -8,6 +8,8 @@ namespace Pokedex;
 
 public partial class MainPage : ContentPage
 {
+    private readonly LoadingPopUp loadingPopUp = new("Looking for pokemon...");
+
 	public MainPage()
 	{
 		InitializeComponent();
@@ -15,8 +17,7 @@ public partial class MainPage : ContentPage
 
 	public void OnTextCompleted(object sender, EventArgs args)
 	{
-        var popup = new LoadingPopUp("Looking for pokemon...");
-        this.ShowPopup(popup);
+        this.ShowPopup(loadingPopUp);
 
         string text = ((Entry)sender).Text;
 
@@ -31,18 +32,16 @@ public partial class MainPage : ContentPage
                 if (pokemonSerialized != null)
                 {
                     Pokemon pokemon = JsonSerializer.Deserialize<Pokemon>(pokemonSerialized);
-                    //popup.ClosePopUp();
+                    loadingPopUp.ClosePopUp();
                 }
                 else
                 {
-                    //popup.ClosePopUp();
                     ShowPokemonNotFoundAlert();
                 }
 
             }
             catch (Exception)
             {
-                //popup.ClosePopUp();
                 ShowPokemonNotFoundAlert();
             }
         }
@@ -50,6 +49,7 @@ public partial class MainPage : ContentPage
 
 	private async void ShowPokemonNotFoundAlert()
 	{
+        loadingPopUp.ClosePopUp();
         await DisplayAlert("Pokémon not found", "Are you sure you spelled the name correctly?", "I will check");
     }
 }
