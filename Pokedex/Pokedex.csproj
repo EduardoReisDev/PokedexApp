@@ -51,12 +51,7 @@
 	  <None Remove="Models\" />
 	  <None Remove="ViewModels\" />
 	  <None Remove="Resources\Images\" />
-	  <None Remove="Resources\Images\ic_pokebola_white.png" />
 	  <None Remove="Resources\Images\ic_pokebola_red.png" />
-	  <None Remove="Resources\Images\ic_pokebola_24.png" />
-	  <None Remove="Resources\Images\ic_pokebola_32.png" />
-	  <None Remove="Resources\Images\ic_pokebola_512.png" />
-	  <None Remove="Resources\Images\ic_pokebola_64.png" />
 	  <None Remove="Resources\Images\ic_pikachu_white.png" />
 	  <None Remove="CommunityToolkit.Maui" />
 	</ItemGroup>
@@ -71,12 +66,7 @@
 	  <Folder Include="Resources\Images\" />
 	</ItemGroup>
 	<ItemGroup>
-	  <EmbeddedResource Include="Resources\Images\ic_pokebola_white.png" />
 	  <EmbeddedResource Include="Resources\Images\ic_pokebola_red.png" />
-	  <EmbeddedResource Include="Resources\Images\ic_pokebola_24.png" />
-	  <EmbeddedResource Include="Resources\Images\ic_pokebola_32.png" />
-	  <EmbeddedResource Include="Resources\Images\ic_pokebola_512.png" />
-	  <EmbeddedResource Include="Resources\Images\ic_pokebola_64.png" />
 	  <EmbeddedResource Include="Resources\Images\ic_pikachu_white.png" />
 	</ItemGroup>
 	<ItemGroup>
