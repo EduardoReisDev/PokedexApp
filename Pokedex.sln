@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 17.0.31611.283
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Pokedex", "Pokedex\Pokedex.csproj", "{8B7D6FEA-00FD-4501-93D5-3B243715671D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pokedex", "Pokedex\Pokedex.csproj", "{8B7D6FEA-00FD-4501-93D5-3B243715671D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,5 +23,31 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {61F7FB11-1E47-470C-91E2-47F8143E1572}
+	EndGlobalSection
+	GlobalSection(MonoDevelopProperties) = preSolution
+		Policies = $0
+		$0.DotNetNamingPolicy = $1
+		$1.DirectoryNamespaceAssociation = PrefixedHierarchical
+		$0.TextStylePolicy = $2
+		$2.inheritsSet = null
+		$2.scope = text/x-csharp
+		$0.CSharpFormattingPolicy = $3
+		$3.scope = text/x-csharp
+		$0.TextStylePolicy = $4
+		$4.FileWidth = 80
+		$4.TabsToSpaces = True
+		$4.scope = text/plain
+		$0.TextStylePolicy = $5
+		$5.inheritsSet = null
+		$5.scope = application/xml
+		$0.XmlFormattingPolicy = $6
+		$6.scope = application/xml
+		$0.TextStylePolicy = $7
+		$7.inheritsSet = null
+		$7.scope = text/x-html
+		$0.TextStylePolicy = $8
+		$8.inheritsSet = null
+		$8.scope = text/x-web
+		$0.StandardHeader = $9
 	EndGlobalSection
 EndGlobal
